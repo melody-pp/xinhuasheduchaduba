@@ -1,0 +1,1808 @@
+<!DOCTYPE html>
+<!-- 
+Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.0
+Version: 3.5
+Author: KeenThemes
+Website: http://www.keenthemes.com/
+Contact: support@keenthemes.com
+Follow: www.twitter.com/keenthemes
+Like: www.facebook.com/keenthemes
+Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+-->
+<!--[if IE 8]>
+<html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+
+<head>
+    <meta charset="utf-8" />
+    <title>统计分析</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../../assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../../assets/global/plugins/select2/select2.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css" />
+    <!-- END PAGE LEVEL STYLES -->
+    <!-- BEGIN THEME STYLES -->
+    <link href="../../assets/global/css/components.css" id="style_components" rel="stylesheet" type="text/css" />
+    <link href="../../assets/global/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/admin/layout/css/layout.css" rel="stylesheet" type="text/css" />
+    <link id="style_color" href="../../assets/admin/layout/css/themes/blue.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css" />
+    <!-- END THEME STYLES -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <style>
+    * {
+        font-family: "Microsoft YaHei";
+    }
+    
+    .page-title {
+        font-family: "Microsoft YaHei"
+    }
+    
+    .page-header.navbar .page-logo .logo-default {
+        margin-top: 5px;
+    }
+    
+    .form-group label.col-md-4 {
+        padding-right: 0;
+        padding-left: 5px;
+    }
+    
+    .control-label {
+        margin-top: 5px;
+    }
+    
+    .tabbable-custom > .nav-tabs > li.active {
+        border-top: 3px solid #00b5e5;
+    }
+    
+    .table-toolbar {
+        margin-bottom: 0;
+    }
+    
+    .modal-body {
+        text-align: center;
+    }
+    
+    .table-striped th,
+    .table-striped tr {
+        text-align: center;
+    }
+    
+    .shenpiTable .txtRight {
+        text-align: right;
+    }
+    
+    .shenpiTable .txtLeft {
+        text-align: left;
+    }
+    
+    @media (min-width: 768px) {
+        .modal-dialog {
+            width: 725px;
+            margin: 30px auto;
+        }
+    }
+    
+    .table > tbody > tr > td {
+        vertical-align: middle;
+    }
+    
+    .rjkfyjcTable > tbody > tr > td {
+        border-top: none;
+        padding: 1px;
+        line-height: 2.428571;
+    }
+    
+    table.rjkfyjcTable {
+        border-spacing: 13px;
+        border-collapse: inherit;
+    }
+    
+    .rjkfyjcTable .specialCSS {
+        border: 1px solid #ddd;
+        padding: 1px 8px;
+    }
+    
+    .xiangMuGenZongCK .btn-lg {
+        padding: 14px 24px;
+    }
+    
+    .xiangMuGenZongCK i.arrowRight {
+        font-size: 75px;
+        margin-top: 19px;
+        color: #8f949a;
+    }
+    
+    i.arrowRight_Pop {
+        font-size: 75px;
+        margin-top: 40px;
+        margin-left: 30px;
+        color: #8f949a;
+    }
+    
+    @media (min-width: 768px) {
+        .flow.modal-dialog {
+            width: 840px;
+        }
+    }
+    
+    .xiangMuGenZongCK .firstRow {
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+    
+    .xiangMuGenZongCK .arrowCol {
+        position: relative;
+    }
+    
+    .xiangMuGenZongCK .arrowCol span {
+        position: absolute;
+        top: -16px;
+    }
+    
+    .ModalTitle {
+        font-size: 18px;
+        font-weight: 700;
+    }
+    
+    .xiangMuGenZongCK .btn-circle {
+        border-radius: 10px !important;
+    }
+    
+    .btnCSS ul {
+        font-size: 14px;
+        margin-top: 10px;
+        text-align: left;
+    }
+    
+    .btnCSS {
+        padding-bottom: 4px !important;
+    }
+    
+    .gaoJiJianSuo a {
+        margin-right: 12px;
+        text-decoration: underline;
+        font-size: 15px;
+    }
+    
+    @media (min-width: 768px) {
+        .XQ_pop.modal-dialog {
+            width: 940px;
+        }
+    }
+    </style>
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<!-- DOC: Apply "page-header-fixed-mobile" and "page-footer-fixed-mobile" class to body element to force fixed header or footer in mobile devices -->
+<!-- DOC: Apply "page-sidebar-closed" class to the body and "page-sidebar-menu-closed" class to the sidebar menu element to hide the sidebar by default -->
+<!-- DOC: Apply "page-sidebar-hide" class to the body to make the sidebar completely hidden on toggle -->
+<!-- DOC: Apply "page-sidebar-closed-hide-logo" class to the body element to make the logo hidden on sidebar toggle -->
+<!-- DOC: Apply "page-sidebar-hide" class to body element to completely hide the sidebar on sidebar toggle -->
+<!-- DOC: Apply "page-sidebar-fixed" class to have fixed sidebar -->
+<!-- DOC: Apply "page-footer-fixed" class to the body element to have fixed footer -->
+<!-- DOC: Apply "page-sidebar-reversed" class to put the sidebar on the right side -->
+<!-- DOC: Apply "page-full-width" class to the body element to have full width page without the sidebar menu -->
+
+<body class="page-header-fixed page-quick-sidebar-over-content ">
+    <!-- BEGIN HEADER -->
+    <div class="page-header navbar navbar-fixed-top">
+        <!-- BEGIN HEADER INNER -->
+        <div class="page-header-inner">
+            <!-- BEGIN LOGO -->
+            <div class="page-logo">
+                <a href="#">
+                    <img src="../../assets/admin/layout/img/logo-zcgl.png" alt="logo" class="logo-default" />
+                </a>
+                <div class="menu-toggler sidebar-toggler hide">
+                    <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+                </div>
+            </div>
+            <!-- END LOGO -->
+            <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+            <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+            </a>
+            <!-- END RESPONSIVE MENU TOGGLER -->
+            <!-- BEGIN TOP NAVIGATION MENU -->
+            <div class="top-menu">
+                <ul class="nav navbar-nav pull-right">
+                    <!-- BEGIN NOTIFICATION DROPDOWN -->
+                    <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                    <li class="dropdown dropdown-user">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                            <span class="username username-hide-on-mobile">
+                    总社门户 </span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-default" style="display:none;">
+                            <li>
+                                <a href="extra_profile.html">
+                                    <i class="icon-user"></i> 个人资料 </a>
+                            </li>
+                            <li>
+                                <a href="page_calendar.html">
+                                    <i class="icon-calendar"></i> 我的日程 </a>
+                            </li>
+                            <li>
+                                <a href="inbox.html">
+                                    <i class="icon-envelope-open"></i> 我的邮件 <span class="badge badge-danger">
+                            3 </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="page_todo.html">
+                                    <i class="icon-rocket"></i> 我的任务 <span class="badge badge-success">
+                            7 </span>
+                                </a>
+                            </li>
+                            <li class="divider">
+                            </li>
+                            <li>
+                                <a href="extra_lock.html">
+                                    <i class="icon-lock"></i> 账号切换 </a>
+                            </li>
+                            <li>
+                                <a href="login.html">
+                                    <i class="icon-key"></i> 退出 </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropdown-user">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                            <span class="username username-hide-on-mobile">
+                    应用导航 </span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-default" style="display:none;">
+                            <li>
+                                <a href="extra_profile.html">
+                                    <i class="icon-user"></i> 个人资料 </a>
+                            </li>
+                            <li>
+                                <a href="page_calendar.html">
+                                    <i class="icon-calendar"></i> 我的日程 </a>
+                            </li>
+                            <li>
+                                <a href="inbox.html">
+                                    <i class="icon-envelope-open"></i> 我的邮件 <span class="badge badge-danger">
+                            3 </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="page_todo.html">
+                                    <i class="icon-rocket"></i> 我的任务 <span class="badge badge-success">
+                            7 </span>
+                                </a>
+                            </li>
+                            <li class="divider">
+                            </li>
+                            <li>
+                                <a href="extra_lock.html">
+                                    <i class="icon-lock"></i> 账号切换 </a>
+                            </li>
+                            <li>
+                                <a href="login.html">
+                                    <i class="icon-key"></i> 退出 </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropdown-user">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                            <span class="username username-hide-on-mobile">
+                    个人空间 </span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-default" style="display:none;">
+                            <li>
+                                <a href="extra_profile.html">
+                                    <i class="icon-user"></i> 个人资料 </a>
+                            </li>
+                            <li>
+                                <a href="page_calendar.html">
+                                    <i class="icon-calendar"></i> 我的日程 </a>
+                            </li>
+                            <li>
+                                <a href="inbox.html">
+                                    <i class="icon-envelope-open"></i> 我的邮件 <span class="badge badge-danger">
+                            3 </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="page_todo.html">
+                                    <i class="icon-rocket"></i> 我的任务 <span class="badge badge-success">
+                            7 </span>
+                                </a>
+                            </li>
+                            <li class="divider">
+                            </li>
+                            <li>
+                                <a href="extra_lock.html">
+                                    <i class="icon-lock"></i> 账号切换 </a>
+                            </li>
+                            <li>
+                                <a href="login.html">
+                                    <i class="icon-key"></i> 退出 </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropdown-extended dropdown-notification" id="header_notification_bar">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                            <i class="icon-bell"></i>
+                            <span class="badge badge-default">7</span>
+                        </a>
+                        <ul class="dropdown-menu" style="display:none;">
+                            <li class="external">
+                                <h3><span class="bold">12 pending</span> notifications</h3>
+                                <a href="extra_profile.html">view all</a>
+                            </li>
+                            <li>
+                                <ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="time">just now</span>
+                                            <span class="details">
+                                    <span class="label label-sm label-icon label-success">
+                                    <i class="fa fa-plus"></i>
+                                    </span> New user registered. </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="time">3 mins</span>
+                                            <span class="details">
+                                    <span class="label label-sm label-icon label-danger">
+                                    <i class="fa fa-bolt"></i>
+                                    </span> Server #12 overloaded. </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="time">10 mins</span>
+                                            <span class="details">
+                                    <span class="label label-sm label-icon label-warning">
+                                    <i class="fa fa-bell-o"></i>
+                                    </span> Server #2 not responding. </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="time">14 hrs</span>
+                                            <span class="details">
+                                    <span class="label label-sm label-icon label-info">
+                                    <i class="fa fa-bullhorn"></i>
+                                    </span> Application error. </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="time">2 days</span>
+                                            <span class="details">
+                                    <span class="label label-sm label-icon label-danger">
+                                    <i class="fa fa-bolt"></i>
+                                    </span> Database overloaded 68%. </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="time">3 days</span>
+                                            <span class="details">
+                                    <span class="label label-sm label-icon label-danger">
+                                    <i class="fa fa-bolt"></i>
+                                    </span> A user IP blocked. </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="time">4 days</span>
+                                            <span class="details">
+                                    <span class="label label-sm label-icon label-warning">
+                                    <i class="fa fa-bell-o"></i>
+                                    </span> Storage Server #4 not responding dfdfdfd. </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="time">5 days</span>
+                                            <span class="details">
+                                    <span class="label label-sm label-icon label-info">
+                                    <i class="fa fa-bullhorn"></i>
+                                    </span> System Error. </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="time">9 days</span>
+                                            <span class="details">
+                                    <span class="label label-sm label-icon label-danger">
+                                    <i class="fa fa-bolt"></i>
+                                    </span> Storage server failed. </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- END NOTIFICATION DROPDOWN -->
+                    <!-- BEGIN INBOX DROPDOWN -->
+                    <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                    <li class="dropdown dropdown-extended dropdown-inbox" id="header_inbox_bar">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                            <i class="icon-envelope-open"></i>
+                            <span class="badge badge-default">
+                    4 </span>
+                        </a>
+                        <ul class="dropdown-menu" style="display:none;">
+                            <li class="external">
+                                <h3>You have <span class="bold">7 New</span> Messages</h3>
+                                <a href="page_inbox.html">view all</a>
+                            </li>
+                            <li>
+                                <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
+                                    <li>
+                                        <a href="inbox.html?a=view">
+                                            <span class="photo">
+                                    <img src="../../assets/admin/layout3/img/avatar2.jpg" class="img-circle" alt="">
+                                    </span>
+                                            <span class="subject">
+                                    <span class="from">
+                                    Lisa Wong </span>
+                                            <span class="time">Just Now </span>
+                                            </span>
+                                            <span class="message">
+                                    Vivamus sed auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="inbox.html?a=view">
+                                            <span class="photo">
+                                    <img src="../../assets/admin/layout3/img/avatar3.jpg" class="img-circle" alt="">
+                                    </span>
+                                            <span class="subject">
+                                    <span class="from">
+                                    Richard Doe </span>
+                                            <span class="time">16 mins </span>
+                                            </span>
+                                            <span class="message">
+                                    Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="inbox.html?a=view">
+                                            <span class="photo">
+                                    <img src="../../assets/admin/layout3/img/avatar1.jpg" class="img-circle" alt="">
+                                    </span>
+                                            <span class="subject">
+                                    <span class="from">
+                                    Bob Nilson </span>
+                                            <span class="time">2 hrs </span>
+                                            </span>
+                                            <span class="message">
+                                    Vivamus sed nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="inbox.html?a=view">
+                                            <span class="photo">
+                                    <img src="../../assets/admin/layout3/img/avatar2.jpg" class="img-circle" alt="">
+                                    </span>
+                                            <span class="subject">
+                                    <span class="from">
+                                    Lisa Wong </span>
+                                            <span class="time">40 mins </span>
+                                            </span>
+                                            <span class="message">
+                                    Vivamus sed auctor 40% nibh congue nibh... </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="inbox.html?a=view">
+                                            <span class="photo">
+                                    <img src="../../assets/admin/layout3/img/avatar3.jpg" class="img-circle" alt="">
+                                    </span>
+                                            <span class="subject">
+                                    <span class="from">
+                                    Richard Doe </span>
+                                            <span class="time">46 mins </span>
+                                            </span>
+                                            <span class="message">
+                                    Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- END INBOX DROPDOWN -->
+                    <!-- BEGIN TODO DROPDOWN -->
+                    <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                    <li class="dropdown dropdown-extended dropdown-tasks" id="header_task_bar">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                            <i class="icon-calendar"></i>
+                            <span class="badge badge-default">
+                    3 </span>
+                        </a>
+                        <ul class="dropdown-menu extended tasks" style="display:none;">
+                            <li class="external">
+                                <h3>You have <span class="bold">12 pending</span> tasks</h3>
+                                <a href="page_todo.html">view all</a>
+                            </li>
+                            <li>
+                                <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="task">
+                                    <span class="desc">New release v1.2 </span>
+                                            <span class="percent">30%</span>
+                                            </span>
+                                            <span class="progress">
+                                    <span style="width: 40%;" class="progress-bar progress-bar-success"
+                                          aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"><span
+                                            class="sr-only">40% Complete</span></span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="task">
+                                    <span class="desc">Application deployment</span>
+                                            <span class="percent">65%</span>
+                                            </span>
+                                            <span class="progress">
+                                    <span style="width: 65%;" class="progress-bar progress-bar-danger"
+                                          aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"><span
+                                            class="sr-only">65% Complete</span></span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="task">
+                                    <span class="desc">Mobile app release</span>
+                                            <span class="percent">98%</span>
+                                            </span>
+                                            <span class="progress">
+                                    <span style="width: 98%;" class="progress-bar progress-bar-success"
+                                          aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"><span
+                                            class="sr-only">98% Complete</span></span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="task">
+                                    <span class="desc">Database migration</span>
+                                            <span class="percent">10%</span>
+                                            </span>
+                                            <span class="progress">
+                                    <span style="width: 10%;" class="progress-bar progress-bar-warning"
+                                          aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"><span
+                                            class="sr-only">10% Complete</span></span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="task">
+                                    <span class="desc">Web server upgrade</span>
+                                            <span class="percent">58%</span>
+                                            </span>
+                                            <span class="progress">
+                                    <span style="width: 58%;" class="progress-bar progress-bar-info" aria-valuenow="58"
+                                          aria-valuemin="0" aria-valuemax="100"><span
+                                            class="sr-only">58% Complete</span></span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="task">
+                                    <span class="desc">Mobile development</span>
+                                            <span class="percent">85%</span>
+                                            </span>
+                                            <span class="progress">
+                                    <span style="width: 85%;" class="progress-bar progress-bar-success"
+                                          aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
+                                            class="sr-only">85% Complete</span></span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="task">
+                                    <span class="desc">New UI release</span>
+                                            <span class="percent">38%</span>
+                                            </span>
+                                            <span class="progress progress-striped">
+                                    <span style="width: 38%;" class="progress-bar progress-bar-important"
+                                          aria-valuenow="18" aria-valuemin="0" aria-valuemax="100"><span
+                                            class="sr-only">38% Complete</span></span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- END TODO DROPDOWN -->
+                    <!-- BEGIN USER LOGIN DROPDOWN -->
+                    <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                    <li class="dropdown dropdown-user">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                            <img alt="" class="img-circle" src="../../assets/admin/layout/img/avatar3_small.jpg" />
+                            <span class="username username-hide-on-mobile">
+                    张某东 技术局 </span>
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-default">
+                            <li>
+                                <a href="extra_profile.html">
+                                    <i class="icon-user"></i> 个人资料 </a>
+                            </li>
+                            <li>
+                                <a href="page_calendar.html">
+                                    <i class="icon-calendar"></i> 我的日程 </a>
+                            </li>
+                            <li>
+                                <a href="inbox.html">
+                                    <i class="icon-envelope-open"></i> 我的邮件 <span class="badge badge-danger">
+                            3 </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="page_todo.html">
+                                    <i class="icon-rocket"></i> 我的任务 <span class="badge badge-success">
+                            7 </span>
+                                </a>
+                            </li>
+                            <li class="divider">
+                            </li>
+                            <li>
+                                <a href="extra_lock.html">
+                                    <i class="icon-lock"></i> 账号切换 </a>
+                            </li>
+                            <li>
+                                <a href="login.html">
+                                    <i class="icon-key"></i> 退出 </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- END USER LOGIN DROPDOWN -->
+                    <!-- BEGIN QUICK SIDEBAR TOGGLER -->
+                    <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                    <!-- END QUICK SIDEBAR TOGGLER -->
+                </ul>
+            </div>
+            <!-- END TOP NAVIGATION MENU -->
+        </div>
+        <!-- END HEADER INNER -->
+    </div>
+    <!-- END HEADER -->
+    <div class="clearfix">
+    </div>
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+        <!-- BEGIN SIDEBAR -->
+        <div class="page-sidebar-wrapper">
+            <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+            <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+            <div class="page-sidebar navbar-collapse collapse">
+                <!-- BEGIN SIDEBAR MENU -->
+                <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+                <!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+                <!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+                <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+                <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+                <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+                <ul class="page-sidebar-menu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+                    <!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
+                    <li class="sidebar-toggler-wrapper" style="padding-bottom: 15px;">
+                        <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                        <div class="sidebar-toggler">
+                        </div>
+                        <!-- END SIDEBAR TOGGLER BUTTON -->
+                    </li>
+                    <!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
+                    <li>
+                        <a href="#">
+                            <i class="icon-user"></i>
+                            <span class="title">督办事项（督办人）</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-edit"></i>
+                            <span class="title">督办事项（联系人）</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa fa-rocket"></i>
+                            <span class="title">我的消息</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="icon-diamond"></i>
+                            <span class="title">督办通知</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="icon-paper-plane"></i>
+                            <span class="title">综合查询</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="tongjifenxi.html">
+                            <i class="icon-puzzle"></i>
+                            <span class="title">统计分析</span>
+                            <span class="selected"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-wallet"></i>
+                            <span class="title">信息管理</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-wallet"></i>
+                            <span class="title">全文检索</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- END SIDEBAR MENU -->
+            </div>
+        </div>
+        <!-- END SIDEBAR -->
+        <!-- BEGIN CONTENT -->
+        <div class="page-content-wrapper">
+            <div class="page-content">
+                <div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                                <h4 class="modal-title">Modal title</h4>
+                            </div>
+                            <div class="modal-body">
+                                Widget settings form goes here
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn blue">Save changes</button>
+                                <button type="button" class="btn default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                <div class="theme-panel hidden-xs hidden-sm">
+                    <div class="toggler">
+                    </div>
+                    <div class="toggler-close">
+                    </div>
+                    <div class="theme-options">
+                        <div class="theme-option theme-colors clearfix">
+                            <span>
+                        THEME COLOR </span>
+                            <ul>
+                                <li class="color-default tooltips" data-style="default" data-container="body" data-original-title="Default">
+                                </li>
+                                <li class="color-darkblue tooltips" data-style="darkblue" data-container="body" data-original-title="Dark Blue">
+                                </li>
+                                <li class="color-blue current tooltips" data-style="blue" data-container="body" data-original-title="Blue">
+                                </li>
+                                <li class="color-grey tooltips" data-style="grey" data-container="body" data-original-title="Grey">
+                                </li>
+                                <li class="color-light tooltips" data-style="light" data-container="body" data-original-title="Light">
+                                </li>
+                                <li class="color-light2 tooltips" data-style="light2" data-container="body" data-html="true" data-original-title="Light 2">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="theme-option">
+                            <span>
+                        Layout </span>
+                            <select class="layout-option form-control input-sm">
+                                <option value="fluid" selected="selected">Fluid</option>
+                                <option value="boxed">Boxed</option>
+                            </select>
+                        </div>
+                        <div class="theme-option">
+                            <span>
+                        Header </span>
+                            <select class="page-header-option form-control input-sm">
+                                <option value="fixed" selected="selected">Fixed</option>
+                                <option value="default">Default</option>
+                            </select>
+                        </div>
+                        <div class="theme-option">
+                            <span>
+                        Top Menu Dropdown</span>
+                            <select class="page-header-top-dropdown-style-option form-control input-sm">
+                                <option value="light" selected="selected">Light</option>
+                                <option value="dark">Dark</option>
+                            </select>
+                        </div>
+                        <div class="theme-option">
+                            <span>
+                        Sidebar Mode</span>
+                            <select class="sidebar-option form-control input-sm">
+                                <option value="fixed">Fixed</option>
+                                <option value="default" selected="selected">Default</option>
+                            </select>
+                        </div>
+                        <div class="theme-option">
+                            <span>
+                        Sidebar Menu </span>
+                            <select class="sidebar-menu-option form-control input-sm">
+                                <option value="accordion" selected="selected">Accordion</option>
+                                <option value="hover">Hover</option>
+                            </select>
+                        </div>
+                        <div class="theme-option">
+                            <span>
+                        Sidebar Style </span>
+                            <select class="sidebar-style-option form-control input-sm">
+                                <option value="default" selected="selected">Default</option>
+                                <option value="light">Light</option>
+                            </select>
+                        </div>
+                        <div class="theme-option">
+                            <span>
+                        Sidebar Position </span>
+                            <select class="sidebar-pos-option form-control input-sm">
+                                <option value="left" selected="selected">Left</option>
+                                <option value="right">Right</option>
+                            </select>
+                        </div>
+                        <div class="theme-option">
+                            <span>
+                        Footer </span>
+                            <select class="page-footer-option form-control input-sm">
+                                <option value="fixed">Fixed</option>
+                                <option value="default" selected="selected">Default</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-bar">
+                    <ul class="page-breadcrumb">
+                        <li>
+                            <i class="fa fa-home"></i>
+                            <a href="#">政采管理系统</a>
+                            <i class="fa fa-angle-right"></i>
+                        </li>
+                        <li>
+                            <a href="#">采购申请审批</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row" style="border: 1px solid #ccc;margin: 0;margin-bottom: 20px;position: relative;">
+                    <div class="col-md-12" style="margin-top: 15px;">
+                        <div class="form-group col-md-6">
+                            <div class="form-group clearfix">
+                                <label class="control-label col-md-3" style="padding: 0;padding-left: 44px;">立项时间：</label>
+                                <div class="col-md-4">
+                                    <div class="input-group input-large date-picker input-daterange" data-date="10/11/2012" data-date-format="mm/dd/yyyy">
+                                        <input type="text" class="form-control" name="from">
+                                        <span class="input-group-addon" style="background-color: #fff;border: none;">
+                                                至 </span>
+                                        <input type="text" class="form-control" name="to">
+                                    </div>
+                                    <!-- /input-group -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div class="form-group clearfix">
+                                <label class="control-label col-md-3" style="padding: 0;padding-left: 44px;">办结日期：</label>
+                                <div class="col-md-4">
+                                    <div class="input-group input-large date-picker input-daterange" data-date="10/11/2012" data-date-format="mm/dd/yyyy">
+                                        <input type="text" class="form-control" name="from">
+                                        <span class="input-group-addon" style="background-color: #fff;border: none;">
+                                                至 </span>
+                                        <input type="text" class="form-control" name="to">
+                                    </div>
+                                    <!-- /input-group -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12" style="text-align: center;padding: 10px 0;background-color: #f9f9f9;border-top: 1px solid #ccc;">
+                        <button style="padding: 7px 30px;margin-right: 20px;" type="button" class="btn btn-primary">查询
+                        </button>
+                        <button style="padding: 6px 30px;" type="button" class="btn btn-default">重置</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- BEGIN BORDERED TABLE PORTLET-->
+                         <div class="portlet light bordered">
+                                    <div class="portlet-title tabbable-line">
+                                        <div class="caption">
+                                            <i class="icon-share font-dark"></i>
+                                            <span class="caption-subject font-dark bold uppercase">按主办单位</span>
+                                        </div>
+                                        <ul class="nav nav-tabs">
+                                            <li>
+                                                <a href="#portlet_tab2_3" data-toggle="tab"> Tab 3 </a>
+                                            </li>
+                                            <li>
+                                                <a href="#portlet_tab2_2" data-toggle="tab"> Tab 2 </a>
+                                            </li>
+                                            <li class="active">
+                                                <a href="#portlet_tab2_1" data-toggle="tab"> Tab 1 </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="portlet-body">
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="portlet_tab2_1">
+                                                <div class="alert alert-success"> Check out the below dropdown menu. It will be opened as usual since there is enough space at the bottom. </div>
+                                                <div class="btn-group margin-bottom-10">
+                                                    <a class="btn red" href="javascript:;" data-toggle="dropdown">
+                                                        <i class="fa fa-user"></i> Settings
+                                                        <i class="fa fa-angle-down"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu">
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-plus"></i> Add </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-trash-o"></i> Edit </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-times"></i> Delete </a>
+                                                        </li>
+                                                        <li class="divider"> </li>
+                                                        <li>
+                                                            <a href="javascript:;"> Full Settings </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <p> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+                                                    luptatum zzril delenit augue duis dolore te feugait. </p>
+                                                <p> Deros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                                                    nibh euismod tincidunt ut laoreet dolore magna. consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. </p>
+                                            </div>
+                                            <div class="tab-pane" id="portlet_tab2_2">
+                                                <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
+                                                    ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                                                    et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo. </p>
+                                                <p>
+                                                    <a class="btn red" href="ui_tabs_accordions_navs.html#portlet_tab2_2" target="_blank"> Activate this tab via URL </a>
+                                                </p>
+                                            </div>
+                                            <div class="tab-pane" id="portlet_tab2_3">
+                                                <p> Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+                                                    consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </p>
+                                                <p>
+                                                    <a class="btn purple" href="ui_tabs_accordions_navs.html#portlet_tab2_3" target="_blank"> Activate this tab via URL </a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        <!-- END BORDERED TABLE PORTLET-->
+                    </div>
+                    <div class="col-md-6">
+                        <!-- BEGIN BORDERED TABLE PORTLET-->
+                        <div class="portlet box yellow">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="fa fa-paw"></i>项目跟踪
+                                </div>
+                                <div class="tools" style="margin-right: 15px;">
+                                    <a href="javascript:;" class="reload" data-original-title="刷新">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <div class="table-scrollable">
+                                    <table class="table table-bordered table-hover halfTable">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    项目名称
+                                                </th>
+                                                <th>
+                                                    预算
+                                                </th>
+                                                <th>
+                                                    负责人
+                                                </th>
+                                                <th>
+                                                    合同签订日期
+                                                </th>
+                                                <th>
+                                                    状态
+                                                </th>
+                                                <th>
+                                                    操作
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    人力资源系统升级改造
+                                                </td>
+                                                <td>
+                                                    576,0000
+                                                </td>
+                                                <td>
+                                                    畅文丁
+                                                </td>
+                                                <td>
+                                                    2016-10-25
+                                                </td>
+                                                <td>
+                                                    <span class="label label-sm label-success">
+                                        已审批 </span>
+                                                </td>
+                                                <td>
+                                                    <a data-toggle="modal" href="#xiangMuGenZongCK">查看</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    办公耗材
+                                                </td>
+                                                <td>
+                                                    370,0000
+                                                </td>
+                                                <td>
+                                                    畅文丁
+                                                </td>
+                                                <td>
+                                                    2016-8-28
+                                                </td>
+                                                <td>
+                                                    <span class="label label-sm label-success">
+                                        已审批 </span>
+                                                </td>
+                                                <td>
+                                                    <a href="#">查看</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    采编发供售后服务项目
+                                                </td>
+                                                <td>
+                                                    540,0000
+                                                </td>
+                                                <td>
+                                                    畅文丁
+                                                </td>
+                                                <td>
+                                                    2016-5-22
+                                                </td>
+                                                <td>
+                                                    <span class="label label-sm label-success">
+                                        已审批 </span>
+                                                </td>
+                                                <td>
+                                                    <a href="#">查看</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    程控电话计费系统代维
+                                                </td>
+                                                <td>
+                                                    320,0000
+                                                </td>
+                                                <td>
+                                                    畅文丁
+                                                </td>
+                                                <td>
+                                                    2016-3-29
+                                                </td>
+                                                <td>
+                                                    <span class="label label-sm label-success">
+                                        已审批 </span>
+                                                </td>
+                                                <td>
+                                                    <a href="#">查看</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END BORDERED TABLE PORTLET-->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- BEGIN CHART PORTLET-->
+                        <div class="portlet light bordered">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="icon-bar-chart font-green-haze"></i>
+                                    <span class="caption-subject bold uppercase font-green-haze"> 项目统计</span>
+                                </div>
+                                <div class="tools">
+                                    <a href="javascript:;" class="fullscreen" data-original-title="全屏">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="portlet-body" style="position: relative;padding-bottom: 20px;">
+                                <h3 style="text-align: center;font-size: 20px;margin-top: 8px;"><span>2016</span>年度项目统计</h3>
+                                <div class="form-group col-md-5" style="position:absolute;top: 0;right: -45px;">
+                                    <label class="col-md-4 control-label">年度：</label>
+                                    <div class="col-md-7" style="padding-left: 0;">
+                                        <select class="form-control" style="height: 27px;line-height: 27px;font-size: 13px;padding: 3px 12px;">
+                                            <option>2013</option>
+                                            <option>2014</option>
+                                            <option>2015</option>
+                                            <option>2016</option>
+                                            <option>2017</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <p class="col-md-5" style="position:absolute;top: 35px;right: -50px;">项目总数：<span>78</span>个
+                                </p>
+                                <div id="chart1" class="chart" style="height: 270px;">
+                                </div>
+                                <a href="#xiangMuTongJiXQ" data-toggle="modal" style="position:absolute;right: 5px;bottom: 7px;">点击详情</a>
+                            </div>
+                        </div>
+                        <!-- END CHART PORTLET-->
+                    </div>
+                    <div class="col-md-6">
+                        <!-- BEGIN CHART PORTLET-->
+                        <div class="portlet light portlet-fit bordered">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class=" icon-layers font-green"></i>
+                                    <span class="caption-subject font-green bold uppercase">年度明细</span>
+                                </div>
+                                <div class="actions">
+                                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                                        <i class="icon-cloud-upload"></i>
+                                    </a>
+                                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                                        <i class="icon-wrench"></i>
+                                    </a>
+                                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                                        <i class="icon-trash"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="portlet-body" style="position: relative;">
+                                <h3 style="text-align: center;font-size: 20px;margin-top: 8px;"><span>2016</span>年项目办理一览图</h3>
+                                <div class="form-group col-md-5" style="position:absolute;top: 0;right: -45px;">
+                                    <label class="col-md-4 control-label">年度：</label>
+                                    <div class="col-md-7" style="padding-left: 0;">
+                                        <select class="form-control" style="height: 27px;line-height: 27px;font-size: 13px;padding: 3px 12px;">
+                                            <option>2013</option>
+                                            <option>2014</option>
+                                            <option>2015</option>
+                                            <option>2016</option>
+                                            <option>2017</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="echarts_bar" style="height:290px;"></div>
+                            </div>
+                        </div>
+                        <!-- END CHART PORTLET-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END CONTENT -->
+    </div>
+    <!-- END CONTAINER -->
+    <!-- BEGIN FOOTER -->
+    <div class="page-footer">
+        <div class="page-footer-inner">
+        </div>
+        <div class="scrfoll-to-top">
+            <i class="icon-arrow-up"></i>
+        </div>
+    </div>
+    <div class="modal fade bs-modal-lg" id="daiBanShiXiangSP" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    <h4 class="modal-title ModalTitle">采购审批</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="portlet box">
+                                <div class="portlet-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered shenpiTable">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="txtRight">
+                                                        申请类别：
+                                                    </td>
+                                                    <td class="txtLeft">
+                                                        工程类
+                                                    </td>
+                                                    <td class="txtRight">
+                                                        预算文号：
+                                                    </td>
+                                                    <td class="txtLeft">
+                                                        XXXXXX
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="txtRight">
+                                                        预算：
+                                                    </td>
+                                                    <td class="txtLeft">
+                                                        100万元
+                                                    </td>
+                                                    <td class="txtRight">
+                                                        采购方式建议：
+                                                    </td>
+                                                    <td class="txtLeft">
+                                                        公开招标
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="txtRight">
+                                                        申请部门：
+                                                    </td>
+                                                    <td class="txtLeft">
+                                                        技术局
+                                                    </td>
+                                                    <td class="txtRight">
+                                                        业务归口部门：
+                                                    </td>
+                                                    <td class="txtLeft">
+                                                        技术局
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="txtRight">项目名称：</td>
+                                                    <td class="txtLeft">新华社办公信息化升级改造项目</td>
+                                                    <td class="txtRight">备注：</td>
+                                                    <td class="txtLeft">无</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="txtRight">子项目：</td>
+                                                    <td class="txtLeft">
+                                                        <a data-toggle="modal" href="#ruanJianKaiFaYuJiCheng">软件开发与集成</a>
+                                                        <a href="#"><img src="../../assets/admin/layout/img/fileDownload.png" data-toggle="tooltip" data-placement="top" title="下载"></a>
+                                                        <a href="#"><img src="../../assets/admin/layout/img/lanxin.png" class="lanxin" data-toggle="tooltip" data-placement="top" title="蓝信"></a>
+                                                        <a href="#"><img src="../../assets/admin/layout/img/email.png" data-toggle="tooltip" data-placement="top" title="邮件"></a>
+                                                        <a href="#"><img src="../../assets/admin/layout/img/cloudDownload.png" data-toggle="tooltip" data-placement="top" title="云盘"></a>
+                                                    </td>
+                                                    <td class="txtRight">子项目预算：</td>
+                                                    <td class="txtLeft">80万元</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="txtRight">子项目：</td>
+                                                    <td class="txtLeft">
+                                                        <a href="#">硬件采购</a>
+                                                        <a href="#"><img src="../../assets/admin/layout/img/fileDownload.png" alt=""></a>
+                                                        <a href="#"><img src="../../assets/admin/layout/img/lanxin.png" alt=""></a>
+                                                        <a href="#"><img src="../../assets/admin/layout/img/email.png" alt=""></a>
+                                                        <a href="#"><img src="../../assets/admin/layout/img/cloudDownload.png" alt=""></a>
+                                                    </td>
+                                                    <td class="txtRight">子项目预算：</td>
+                                                    <td class="txtLeft">20万元</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="txtRight">工期：</td>
+                                                    <td class="txtLeft">6个月</td>
+                                                    <td class="txtRight">当年执行额：</td>
+                                                    <td class="txtLeft">100万元</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="txtRight">联系人：</td>
+                                                    <td class="txtLeft">畅文丁</td>
+                                                    <td class="txtRight">联系电话：</td>
+                                                    <td class="txtLeft">158****9089</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="txtRight">项目负责人：</td>
+                                                    <td class="txtLeft">畅文丁</td>
+                                                    <td class="txtRight">负责人电话：</td>
+                                                    <td class="txtLeft">158****9089</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="txtRight">是否退回：</td>
+                                                    <td class="txtLeft"></td>
+                                                    <td class="txtRight">退回意见：</td>
+                                                    <td class="txtLeft"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn blue">退回</button>
+                    <button type="button" class="btn blue">分发</button>
+                    <button type="button" class="btn default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <div class="modal fade" id="ruanJianKaiFaYuJiCheng" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    <h4 class="modal-title ModalTitle">软件开发与集成</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="portlet box">
+                        <div class="portlet-body">
+                            <div class="table-responsive">
+                                <table class="table  shenpiTable rjkfyjcTable" style="margin-bottom: 0;">
+                                    <tbody>
+                                        <tr>
+                                            <td class="txtRight">
+                                                子项目名称：
+                                            </td>
+                                            <td class="txtLeft specialCSS">
+                                                软件开发与集成
+                                            </td>
+                                            <td class="txtLeft">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="txtRight">
+                                                子项目预算：
+                                            </td>
+                                            <td class="txtLeft specialCSS">
+                                                80万
+                                            </td>
+                                            <td class="txtLeft">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="txtRight">
+                                                工期：
+                                            </td>
+                                            <td class="txtLeft specialCSS">
+                                                6个月
+                                            </td>
+                                            <td class="txtLeft">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="txtRight">预算批文：</td>
+                                            <td class="txtLeft specialCSS">人力资源升级改造项目预算批文.pdf</td>
+                                            <td class="txtLeft">
+                                                <a href="#"><img src="../../assets/admin/layout/img/fileDownload.png" alt=""></a>
+                                                <a href="#"><img src="../../assets/admin/layout/img/lanxin.png" alt=""></a>
+                                                <a href="#"><img src="../../assets/admin/layout/img/email.png" alt=""></a>
+                                                <a href="#"><img src="../../assets/admin/layout/img/cloudDownload.png" alt=""></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="txtRight">采购需求：</td>
+                                            <td class="txtLeft specialCSS">软件开发与集成子项目采购需求.docx</td>
+                                            <td class="txtLeft">
+                                                <a href="#"><img src="../../assets/admin/layout/img/fileDownload.png" alt=""></a>
+                                                <a href="#"><img src="../../assets/admin/layout/img/lanxin.png" alt=""></a>
+                                                <a href="#"><img src="../../assets/admin/layout/img/email.png" alt=""></a>
+                                                <a href="#"><img src="../../assets/admin/layout/img/cloudDownload.png" alt=""></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="txtRight">采购说明：</td>
+                                            <td class="txtLeft specialCSS">软件开发与集成子项目采购说明.docx</td>
+                                            <td class="txtLeft">
+                                                <a href="#"><img src="../../assets/admin/layout/img/fileDownload.png" alt=""></a>
+                                                <a href="#"><img src="../../assets/admin/layout/img/lanxin.png" alt=""></a>
+                                                <a href="#"><img src="../../assets/admin/layout/img/email.png" alt=""></a>
+                                                <a href="#"><img src="../../assets/admin/layout/img/cloudDownload.png" alt=""></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="txtRight">其它：</td>
+                                            <td class="txtLeft specialCSS">软件开发与集成子项目其它说明文件.docx</td>
+                                            <td class="txtLeft">
+                                                <a href="#"><img src="../../assets/admin/layout/img/fileDownload.png" alt=""></a>
+                                                <a href="#"><img src="../../assets/admin/layout/img/lanxin.png" alt=""></a>
+                                                <a href="#"><img src="../../assets/admin/layout/img/email.png" alt=""></a>
+                                                <a href="#"><img src="../../assets/admin/layout/img/cloudDownload.png" alt=""></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer center-block" style="text-align: center;">
+                    <button type="button" class="btn blue">打包下载</button>
+                    <button type="button" class="btn default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <div class="modal fade" id="xiangMuGenZongCK" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class=" flow modal-dialog  modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                </div>
+                <div class="modal-body xiangMuGenZongCK" style="padding-bottom: 0;">
+                    <div class="portlet box">
+                        <div class="portlet-body " style="">
+                            <div class="row">
+                                <div class="col-md-5 " style="padding: 0;">
+                                    <div class="form-group clearfix">
+                                        <label class="col-md-4 control-label" style="padding: 0;margin-top: 5px;padding-left: 30px;">项目名称：</label>
+                                        <div class="col-md-8" style="padding: 0;">
+                                            <input type="text" class="form-control" value="人力资源系统升级改造项目">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="form-group clearfix">
+                                        <label class="col-md-4 control-label" style="padding-right: 0;padding-left: 19px;">子项目名称：</label>
+                                        <div class="col-md-8" style="padding-left: 8px;">
+                                            <select class="form-control">
+                                                <option>软件开发与集成</option>
+                                                <option>硬件采购</option>
+                                                <option>第三方测试</option>
+                                                <option>等级保护测评</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <button type="button" class="btn btn-circle btn-primary">查询</button>
+                                </div>
+                            </div>
+                            <div class="row firstRow">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2">
+                                    <button type="button" class="btn btn-circle dark btn-lg">申请</button>
+                                </div>
+                                <div class="col-md-2 arrowCol">
+                                    <span>15个工作日</span>
+                                    <i class="fa fa-long-arrow-right arrowRight"></i>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="button" class="btn btn-circle purple btn-lg">审批</button>
+                                </div>
+                                <div class="col-md-2 arrowCol">
+                                    <span style="color:red;">46个工作日</span>
+                                    <i class="fa fa-long-arrow-right arrowRight"></i>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="button" class="btn btn-circle red btn-lg">招标准备</button>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <ul class="list-unstyled">
+                                        <li><span class="labelTxt">提交时间</span>：<span class="contentTxt">2016年5月11日 16:48</span></li>
+                                        <li><span class="labelTxt">业务归口部门</span>：<span class="contentTxt">技术局</span></li>
+                                        <li><span class="labelTxt">联系人</span>：<span class="contentTxt">畅文丁</span></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <ul class="list-unstyled">
+                                        <li><span class="labelTxt">审批时间</span>：<span class="contentTxt">2016年6月29日 10:48</span></li>
+                                        <li><span class="labelTxt">业务归口部门</span>：<span class="contentTxt">技术局</span></li>
+                                        <li><span class="labelTxt">审批人</span>：<span class="contentTxt">卢明理</span></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <ul class="list-unstyled">
+                                        <li><span class="labelTxt">完成时间</span>：<span class="contentTxt">2016年9月1 11:20</span></li>
+                                        <li><span class="labelTxt">代理机构</span>：<span class="contentTxt">中仪国际招标公司</span></li>
+                                        <li><span class="labelTxt">审批人</span>：<span class="contentTxt">卢明理</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row" style="margin: 30px 0;">
+                                <div class="col-md-9"></div>
+                                <div class="col-md-2 arrowCol">
+                                    <span style="right:-15px;top: 0;">23个工作日</span>
+                                    <i class="fa fa-long-arrow-down arrowRight"></i>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                            <div class="row firstRow">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2">
+                                    <button type="button" class="btn btn-circle green btn-lg">合同签订</button>
+                                </div>
+                                <div class="col-md-2 arrowCol">
+                                    <span style="right: 30px;">5个工作日</span>
+                                    <i class="fa fa-long-arrow-left arrowRight"></i>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="button" class="btn btn-circle yellow btn-lg">中标公示</button>
+                                </div>
+                                <div class="col-md-2 arrowCol">
+                                    <span style="right: 30px;">5个工作日</span>
+                                    <i class="fa fa-long-arrow-left arrowRight"></i>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="button" class="btn btn-circle blue btn-lg">评标</button>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <ul class="list-unstyled">
+                                        <li><span class="labelTxt">签订时间</span>：<span class="contentTxt">2016年10月25日 10:48</span></li>
+                                        <li><span class="labelTxt">业务归口部门</span>：<span class="contentTxt">技术局</span></li>
+                                        <li><span class="labelTxt">联系人</span>：<span class="contentTxt">畅文丁</span></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <ul class="list-unstyled">
+                                        <li><span class="labelTxt">公示时间</span>：<span class="contentTxt">2016年10月15日 10:48</span></li>
+                                        <li><span class="labelTxt">处理人</span>：<span class="contentTxt">白楠</span></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <ul class="list-unstyled">
+                                        <li><span class="labelTxt">完成时间</span>：<span class="contentTxt">2016年10月10日 12:48</span></li>
+                                        <li><span class="labelTxt">处理人</span>：<span class="contentTxt">白楠</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer center-block">
+                    <button type="button" class="btn default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <div class="modal fade" id="xiangMuTongJiXQ" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class=" XQ_pop modal-dialog  modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    <h4 class="modal-title ModalTitle">项目概览</h4>
+                </div>
+                <div class="modal-body xiangMuGenZongCK" style="padding-bottom: 0;">
+                    <div class="portlet box">
+                        <div class="portlet-body " style="">
+                            <div class="row">
+                                <div class="col-md-4 gaoJiJianSuo" style="padding: 0;">
+                                    <a href="#">一周内</a><a href="#">一月内</a><a href="#">全部</a>
+                                    <button type="button" class="btn btn-circle blue">高级检索</button>
+                                </div>
+                                <div class="col-md-6" style="padding: 0;">
+                                    <div class="form-group clearfix">
+                                        <label class="control-label col-md-3" style="padding: 0;padding-left: 44px;">日期范围：</label>
+                                        <div class="col-md-4">
+                                            <div class="input-group input-large date-picker input-daterange" data-date="10/11/2012" data-date-format="mm/dd/yyyy">
+                                                <input type="text" class="form-control" name="from">
+                                                <span class="input-group-addon" style="background-color: #fff;border: none;">
+                                                至 </span>
+                                                <input type="text" class="form-control" name="to">
+                                            </div>
+                                            <!-- /input-group -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <button class="btn btn-circle blue">搜索</button>
+                                </div>
+                            </div>
+                            <div class="row firstRow">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2">
+                                    <button type="button" class="btn btn-circle dark btn-lg btnCSS">待提交
+                                        <ul class="list-unstyled">
+                                            <li> 项目数：<span>10</span></li>
+                                            <li>子项目数：<span>20</span></li>
+                                        </ul>
+                                    </button>
+                                </div>
+                                <div class="col-md-2 arrowCol">
+                                    <i class="fa fa-long-arrow-right arrowRight_Pop"></i>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="button" class="btn btn-circle purple btn-lg btnCSS">已申请
+                                        <ul class="list-unstyled">
+                                            <li> 项目数：<span>10</span></li>
+                                            <li>子项目数：<span>30</span></li>
+                                        </ul>
+                                    </button>
+                                </div>
+                                <div class="col-md-2 arrowCol">
+                                    <i class="fa fa-long-arrow-right arrowRight_Pop"></i>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="button" class="btn btn-circle green btn-lg btnCSS">
+                                        合同签订
+                                        <ul class="list-unstyled">
+                                            <li> 项目数：<span>10</span></li>
+                                            <li>子项目数：<span>20</span></li>
+                                        </ul>
+                                    </button>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                            <div class="row" style="margin-top: 45px;">
+                                <div class="col-md-6">
+                                    <div class="portlet light bordered">
+                                        <div class="portlet-body" style="position: relative;padding-bottom: 20px;">
+                                            <div class="form-group col-md-6" style="position:absolute;top: 0;right: -45px;">
+                                                <label class="col-md-4 control-label">年度：</label>
+                                                <div class="col-md-7" style="padding-left: 0;">
+                                                    <select class="form-control" style="height: 27px;line-height: 27px;font-size: 13px;padding: 3px 12px;">
+                                                        <option>2013</option>
+                                                        <option>2014</option>
+                                                        <option>2015</option>
+                                                        <option>2016</option>
+                                                        <option>2017</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <p class="col-md-5" style="position:absolute;top: 35px;right: -2px;">
+                                                项目总数：<span>78</span>个
+                                            </p>
+                                            <div id="chart2" class="chart" style="height: 210px;width: 400px;margin-top: 60px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="portlet light bordered" style="padding-top: 1px;padding-bottom: 0;">
+                                        <div class="portlet-body" style="padding-top: 0;">
+                                            <div class="tabbable-line">
+                                                <ul class="nav nav-tabs ">
+                                                    <li class="active">
+                                                        <a href="#tab_15_1" data-toggle="tab">
+                                        4年 </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#tab_15_2" data-toggle="tab">
+                                        8年 </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#tab_15_3" data-toggle="tab">
+                                        12年 </a>
+                                                    </li>
+                                                </ul>
+                                                <div class="tab-content">
+                                                    <div class="tab-pane active" id="tab_15_1">
+                                                        <div id="echarts_bar_line_fourYear" style="height: 270px;width: 460px;" style="margin-left: -10px;"></div>
+                                                    </div>
+                                                    <div class="tab-pane" id="tab_15_2">
+                                                        <div id="echarts_bar_line_eightYear" style="height: 270px;width: 460px;" style="margin-left: -10px;"></div>
+                                                    </div>
+                                                    <div class="tab-pane" id="tab_15_3">
+                                                        <div id="echarts_bar_line_tenYear" style="height: 270px;width: 460px;" style="margin-left: -10px;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer center-block">
+                    <button type="button" class="btn default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- END FOOTER -->
+    <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+    <!-- BEGIN CORE PLUGINS -->
+    <!--[if lt IE 9]>
+<script src="../../assets/global/plugins/respond.min.js"></script>
+<script src="../../assets/global/plugins/excanvas.min.js"></script>
+<![endif]-->
+    <script src="../../assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+    <script src="../../assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+    <!-- IMPORTANT! Load jquery-ui-1.10.3.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+    <script src="../../assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+    <script src="../../assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../../assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+    <script src="../../assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="../../assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+    <script src="../../assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+    <script src="../../assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+    <script src="../../assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+    <!-- END CORE PLUGINS -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <script type="text/javascript" src="../../assets/global/plugins/select2/select2.min.js"></script>
+    <script type="text/javascript" src="../../assets/global/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../../assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
+    <script type="text/javascript" src="../../assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="../../assets/global/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+    <script type="text/javascript" src="../../assets/global/plugins/clockface/js/clockface.js"></script>
+    <script type="text/javascript" src="../../assets/global/plugins/bootstrap-daterangepicker/moment.min.js"></script>
+    <script type="text/javascript" src="../../assets/global/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script type="text/javascript" src="../../assets/global/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+    <script type="text/javascript" src="../../assets/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <script src="../../assets/global/plugins/amcharts/amcharts/amcharts.js" type="text/javascript"></script>
+    <script src="../../assets/global/plugins/amcharts/amcharts/serial.js" type="text/javascript"></script>
+    <script src="../../assets/global/plugins/amcharts/amcharts/pie.js" type="text/javascript"></script>
+    <script src="../../assets/global/plugins/amcharts/amcharts/radar.js" type="text/javascript"></script>
+    <script src="../../assets/global/plugins/amcharts/amcharts/themes/light.js" type="text/javascript"></script>
+    <script src="../../assets/global/plugins/amcharts/amcharts/themes/patterns.js" type="text/javascript"></script>
+    <script src="../../assets/global/plugins/amcharts/amcharts/themes/chalk.js" type="text/javascript"></script>
+    <script src="../../assets/global/plugins/amcharts/ammap/ammap.js" type="text/javascript"></script>
+    <script src="../../assets/global/plugins/amcharts/ammap/maps/js/worldLow.js" type="text/javascript"></script>
+    <script src="../../assets/admin/pages/scripts/charts-amcharts.js"></script>
+    <script src="../../assets/global/plugins/amcharts/amstockcharts/amstock.js" type="text/javascript"></script>
+    <script src="../../assets/global/plugins/echarts/echarts.js" type="text/javascript"></script>
+    <script src="../../assets/admin/pages/scripts/charts-echarts.js" type="text/javascript"></script>
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="../../assets/global/scripts/metronic.js" type="text/javascript"></script>
+    <script src="../../assets/admin/layout/scripts/layout.js" type="text/javascript"></script>
+    <script src="../../assets/admin/layout/scripts/quick-sidebar.js" type="text/javascript"></script>
+    <script src="../../assets/admin/layout/scripts/demo.js" type="text/javascript"></script>
+    <script src="../../assets/admin/pages/scripts/components-pickers.js"></script>
+    <script>
+    jQuery(document).ready(function() {
+        jQuery.fn.datepicker.dates['cn'] = {
+            days: ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'],
+            daysShort: ['周日', '周一', '周二', '周三', '周四', '周五', '周六'],
+            daysMin: ['日', '一', '二', '三', '四', '五', '六'],
+            months: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+            monthsShort: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+            today: "今天"
+        };
+        $.fn.datepicker.defaults.language = 'cn';
+        Metronic.init(); // init metronic core components
+        Layout.init(); // init current layout
+        QuickSidebar.init(); // init quick sidebar
+        Demo.init(); // init demo features
+        ChartsAmcharts.init(); // init demo charts
+        ComponentsPickers.init();
+
+        $('[data-toggle=tooltip]').tooltip();
+    });
+    </script>
+</body>
+<!-- END BODY -->
+
+</html>
